@@ -1,0 +1,23 @@
+elfhacks a.k.a. examples (copyrights & info in header of each C source file)
+
+NOTE: You are going to need to have library installed in your path else
+compilation will fail.
+
+https://github.com/nullkey/elfhacks.git
+
+Usage:
+make
+	compiles c sources and places respective 32,64bit libs into 32,64
+	folders
+
+make install
+	installs 32/64 bit versions of compiled shared objects (.so's) into
+	/usr/local/$LIB (assumes lib64/lib32 exists in your tree, if this is
+	not the case, modify appropriate makefiles).
+
+
+To actually use your libraries under Linux export LD_PRELOAD env variable.
+
+Example:
+
+LD_PRELOAD=fps.so glxgears
